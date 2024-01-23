@@ -6,7 +6,7 @@ import { IntroCoordinator } from '../coordinators/IntroCoordinator'
 import { Center, HStack, Button, Spacer, Input } from '@chakra-ui/react'
 
 export const StudentIntroList: FC = () => {
-    const connection = new web3.Connection("https://devnet.helius-rpc.com/?api-key=290edc0c-f52a-4681-90d2-8accac0e5e2b")
+    const connection = new web3.Connection(web3.clusterApiUrl("devnet"))
     const [studentIntros, setStudentIntros] = useState<StudentIntro[]>([])
     const [page, setPage] = useState<number>(1);
     const [search, setSearch] = useState<string>("");
